@@ -9,8 +9,6 @@ const colors = {
 const Wrapper = styled.header`
   height: 100vh;
   display: flex;
-  position: relative;
-  overflow: hidden;
 `;
 const HeaderLeft = styled.div`
   flex: 1;
