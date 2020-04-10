@@ -25,7 +25,7 @@ const Header = () => {
   const animateButton = useSpring({
     transform: toggleMenu ? "rotateZ(0deg)" : "rotateZ(90deg)",
     color: toggleMenu ? "#353535" : "#CD5459",
-    config: config.gentle,
+    config: config.default,
   });
   return (
     <Wrapper>

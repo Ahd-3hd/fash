@@ -30,6 +30,9 @@ const HeaderRight = styled.div`
   background-size: cover;
   background-position-x: left;
   background-position-y: top;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -43,6 +46,10 @@ const ElegantText = styled.p`
   font-size: 5vw;
   font-weight: bolder;
   color: ${colors.black};
+  text-shadow: 0px 0px 2px ${colors.black};
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 `;
 const LadyText = styled.p`
   margin: 0;
@@ -50,6 +57,10 @@ const LadyText = styled.p`
   font-size: 5vw;
   font-weight: bolder;
   color: ${colors.blue};
+  text-shadow: 0px 0px 2px ${colors.blue};
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 `;
 const LogoHr = styled.div`
   border: 2px solid ${colors.black};
