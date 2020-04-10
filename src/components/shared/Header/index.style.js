@@ -64,44 +64,6 @@ const LogoHr = styled.div`
   border: 2px solid ${colors.black};
 `;
 
-const MenuButton = styled(animated.button)`
-  font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  z-index: 999;
-  color: ${colors.black};
-  cursor: pointer;
-  transform-origin: center;
-`;
-
-const MenuWrapper = styled(animated.div)`
-  position: absolute;
-  background: ${colors.pink + "aa"};
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(4px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: ${colors.black};
-  transform-origin: center;
-`;
-
-const MenuLinks = styled.a`
-  display: inline-block;
-  margin: 1rem 0;
-  cursor: pointer;
-  transition: color 0.3s ease-in;
-  &:hover {
-    color: ${colors.crimson};
-  }
-`;
 export {
   Wrapper,
   HeaderLeft,
@@ -110,7 +72,4 @@ export {
   ElegantText,
   LadyText,
   LogoHr,
-  MenuButton,
-  MenuWrapper,
-  MenuLinks,
 };
