@@ -30,6 +30,7 @@ const Carousel = ({ data }) => {
   };
   const animateSlide = useSpring({
     transform: `translateX(-${totalSlidesSteps}px)`,
+    transition: "0.2s ease-out",
   });
 
   const slideRef = useRef();
@@ -38,7 +39,7 @@ const Carousel = ({ data }) => {
     setSlideWidth(slideRef.current.clientWidth);
   }, []);
   return (
-    <Wrapper>
+    <Wrapper reverse={true}>
       <LeftContainer>
         <SlidesContainer>
           <SliderButton onClick={handleSlidePosition}>

@@ -35,6 +35,7 @@ const MenuWrapper = styled(animated.div)`
   font-weight: bold;
   color: ${colors.black};
   transform-origin: center;
+  z-index: 998;
 `;
 
 const MenuLinks = styled.a`

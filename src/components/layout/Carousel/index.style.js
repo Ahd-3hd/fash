@@ -9,6 +9,7 @@ const colors = {
 const Wrapper = styled.div`
   height: 100vh;
   display: flex;
+  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   overflow: hidden;
   @media (max-width: 1024px) {
     flex-direction: column-reverse;
