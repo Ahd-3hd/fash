@@ -6,8 +6,11 @@ import {
   SlidesContainer,
   MovingSlidesContainer,
   SingleSlideContainer,
+  SliderButton,
 } from "./index.style";
 import { useSpring } from "react-spring";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 const Carousel = ({ data }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
@@ -37,8 +40,10 @@ const Carousel = ({ data }) => {
   return (
     <Wrapper>
       <LeftContainer>
-        <button onClick={handleSlidePosition}>clicks</button>
         <SlidesContainer>
+          <SliderButton onClick={handleSlidePosition}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </SliderButton>
           <MovingSlidesContainer style={animateSlide}>
             {data.map((item, i) => {
               return <SingleSlideContainer bg={item} key={i} ref={slideRef} />;
