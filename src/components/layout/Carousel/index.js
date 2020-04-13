@@ -7,17 +7,19 @@ import {
   MovingSlidesContainer,
   SingleSlideContainer,
   SliderButton,
+  LogoContainer,
+  ElegantText,
+  LadyText,
+  LogoHr,
 } from "./index.style";
 import { useSpring } from "react-spring";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-const Carousel = ({ data }) => {
+import brushed from "../../../img/brushed.png";
+const Carousel = ({ data, reverse }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [totalSlidesSteps, setTotalSlidesSteps] = useState(0);
-  const handleSlides = () => {
-    activeSlide < 2 ? setActiveSlide(activeSlide + 1) : setActiveSlide(0);
-  };
 
   const handleSlidePosition = () => {
     if (activeSlide < data.length - 1) {
@@ -39,8 +41,13 @@ const Carousel = ({ data }) => {
     setSlideWidth(slideRef.current.clientWidth);
   }, []);
   return (
-    <Wrapper reverse={true}>
-      <LeftContainer>
+    <Wrapper reverse={reverse}>
+      <LeftContainer bg={brushed}>
+        <LogoContainer>
+          <ElegantText>CHIQUE</ElegantText>
+          <LogoHr />
+          <LadyText>DRESSES</LadyText>
+        </LogoContainer>
         <SlidesContainer>
           <SliderButton onClick={handleSlidePosition}>
             <FontAwesomeIcon icon={faAngleLeft} />

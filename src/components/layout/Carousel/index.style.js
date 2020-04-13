@@ -18,10 +18,15 @@ const Wrapper = styled.div`
 const LeftContainer = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
+  background: url(${({ bg }) => bg}) ${colors.pink};
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+
   @media (max-width: 1024px) {
-    flex: 0.5;
+    flex: 0.3;
   }
 `;
 const RightContainer = styled.div`
@@ -41,6 +46,7 @@ const SlidesContainer = styled.div`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   left: 10%;
+  background: #ffffff;
   @media (max-width: 1024px) {
     left: 0;
   }
@@ -80,6 +86,42 @@ const SliderButton = styled.button`
     color: ${colors.crimson};
   }
 `;
+
+const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-self: flex-start;
+  margin: 1rem;
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+const ElegantText = styled.p`
+  margin: 0;
+  align-self: flex-start;
+  font-size: 5vw;
+  font-weight: bolder;
+  color: ${colors.black};
+  text-shadow: 0px 0px 2px ${colors.black};
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
+`;
+const LadyText = styled.p`
+  margin: 0;
+  align-self: flex-end;
+  font-size: 5vw;
+  font-weight: bolder;
+  color: ${colors.blue};
+  text-shadow: 0px 0px 2px ${colors.blue};
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
+`;
+const LogoHr = styled.div`
+  border: 2px solid ${colors.black};
+`;
 export {
   Wrapper,
   LeftContainer,
@@ -88,4 +130,8 @@ export {
   MovingSlidesContainer,
   SingleSlideContainer,
   SliderButton,
+  LogoContainer,
+  ElegantText,
+  LadyText,
+  LogoHr,
 };
