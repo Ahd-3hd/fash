@@ -16,7 +16,7 @@ import { useSpring } from "react-spring";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import brushed from "../../../img/brushed.png";
-const Carousel = ({ data, reverse }) => {
+const Carousel = ({ data, reverse, text }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const [totalSlidesSteps, setTotalSlidesSteps] = useState(0);
@@ -44,9 +44,9 @@ const Carousel = ({ data, reverse }) => {
     <Wrapper reverse={reverse}>
       <LeftContainer bg={brushed}>
         <LogoContainer>
-          <ElegantText>CHIQUE</ElegantText>
+          <ElegantText>{text.first_word}</ElegantText>
           <LogoHr />
-          <LadyText>DRESSES</LadyText>
+          <LadyText>{text.second_word}</LadyText>
         </LogoContainer>
         <SlidesContainer>
           <SliderButton onClick={handleSlidePosition}>

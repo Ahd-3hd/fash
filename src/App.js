@@ -16,8 +16,21 @@ function App() {
     <div className="App">
       <Nav />
       <Header />
-      <Carousel data={dummy} />
-      <Carousel data={dummy2} reverse />
+      <Carousel
+        data={dummy}
+        text={{
+          first_word: "CHIQUE",
+          second_word: "DRESSES",
+        }}
+      />
+      <Carousel
+        data={dummy2}
+        reverse
+        text={{
+          first_word: "STYLISH",
+          second_word: "ABAYA",
+        }}
+      />
     </div>
   );
 }
