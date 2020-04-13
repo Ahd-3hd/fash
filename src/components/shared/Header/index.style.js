@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 const colors = {
   pink: "#DF9093",
   blue: "#5DCCDB",

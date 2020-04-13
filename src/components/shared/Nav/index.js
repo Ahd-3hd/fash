@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { MenuButton, MenuWrapper, MenuLinks } from "./index.style";
 import { useSpring, config } from "react-spring";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
