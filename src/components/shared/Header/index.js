@@ -10,10 +10,11 @@ import {
 } from "./index.style";
 import duaImg from "../../../img/headermulti.png";
 import flowersImg from "../../../img/headerflower.jpg";
+import headerbg from "../../../img/pinkblue.jpg";
 
 const Header = () => {
   return (
-    <Wrapper>
+    <Wrapper bg={headerbg}>
       <HeaderLeft bg={flowersImg}>
         <LogoContainer>
           <ElegantText>ELEGANT</ElegantText>

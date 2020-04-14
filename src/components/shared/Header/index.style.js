@@ -8,25 +8,28 @@ const colors = {
 const Wrapper = styled.header`
   height: 100vh;
   display: flex;
+  background: url(${({ bg }) => bg}) no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 const HeaderLeft = styled.div`
   flex: 1;
-  background: ${colors.pink} url(${({ bg }) => bg}) no-repeat;
-  background-blend-mode: multiply;
+  background: url(${({ bg }) => bg}) no-repeat;
   background-size: 50vh;
   background-position: center;
   background-position-y: top;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  mix-blend-mode: multiply;
 `;
 const HeaderRight = styled.div`
   flex: 1;
-  background: ${colors.blue} url(${({ bg }) => bg}) no-repeat;
-  background-blend-mode: multiply;
+  background: url(${({ bg }) => bg}) no-repeat;
   background-size: cover;
   background-position-x: left;
   background-position-y: top;
+  mix-blend-mode: multiply;
   @media (max-width: 900px) {
     display: none;
   }
