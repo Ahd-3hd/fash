@@ -1,62 +1,54 @@
 import React from "react";
 import {
   Wrapper,
+  LeftSection,
+  RightSection,
   LogoContainer,
-  ElegantText,
-  LadyText,
-  LogoHr,
-  PromotionParagraph,
-  ActionButton,
-  RotatedBackground,
-  LeftContainer,
-  RightContainer,
-  Card,
-  CardMedia,
-  CardDesc,
-  CardTitle,
-  CardParagraph,
-  IndicatorCircle,
-  IndicatorsContainer,
+  LogoTextTop,
+  LogoTextBottom,
+  TextParagraph,
+  CallButton,
+  LeftSectionCardsContainer,
+  CardOneContainer,
+  CardOneImage,
+  CardTwoContainer,
+  CardTwoImage,
+  CardThreeImage,
+  CardThreeContainer,
 } from "./index.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import textBrush from "../../../img/Untitled2.png";
 const Promotion = ({ data }) => {
   return (
-    <Wrapper bg={textBrush}>
-      <LeftContainer>
+    <Wrapper>
+      <LeftSection>
         <LogoContainer>
-          <ElegantText>CHIQUE</ElegantText>
-          <LadyText>DRESSES</LadyText>
-          <LogoHr />
+          <LogoTextTop>Chique</LogoTextTop>
+          <LogoTextBottom>Dresses</LogoTextBottom>
         </LogoContainer>
-        <PromotionParagraph>
+        <TextParagraph>
           TAILORED SPECIFICALLY TO MAKE YOU THINK YOU’RE WORTH THAN YOU ACTUALLY
           ARE
-        </PromotionParagraph>
-        <ActionButton>
-          Browse Collection <FontAwesomeIcon icon={faArrowRight} />
-        </ActionButton>
-      </LeftContainer>
-      <RightContainer>
-        <RotatedBackground bg={data[1]} />
-        <Card>
-          <CardDesc>
-            <CardTitle>TITLE HERE</CardTitle>
-            <CardParagraph>
-              Lorem ipsum dolor sit amet, consectetu radipiscing elit.
-              Pellentesque vulputate lobortis risus et molestie. Vestibulum
-              blandit dictum nunc, vitae ullamcorper erat.
-            </CardParagraph>
-            <IndicatorsContainer>
-              <IndicatorCircle active />
-              <IndicatorCircle />
-              <IndicatorCircle />
-            </IndicatorsContainer>
-          </CardDesc>
-          <CardMedia bg={data[1]} />
-        </Card>
-      </RightContainer>
+        </TextParagraph>
+        <CallButton href="#">
+          Browse Collection
+          <FontAwesomeIcon icon={faArrowRight} color="#353535" />
+        </CallButton>
+        <LeftSectionCardsContainer>
+          <CardOneContainer>
+            <CardOneImage bg={data[1]} />
+          </CardOneContainer>
+          <CardTwoContainer>
+            <CardTwoImage bg={data[0]} />
+          </CardTwoContainer>
+        </LeftSectionCardsContainer>
+      </LeftSection>
+      <RightSection>
+        <CardThreeContainer>
+          <CardThreeImage bg={data[2]} />
+        </CardThreeContainer>
+      </RightSection>
     </Wrapper>
   );
 };

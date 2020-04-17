@@ -21,7 +21,7 @@ function App() {
       <Nav />
       <Header />
       <Promotion data={dummy} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -8,137 +8,152 @@ const colors = {
 const Wrapper = styled.div`
   height: 100vh;
   display: flex;
-  background: url(${({ bg }) => bg}) no-repeat;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
-const LeftContainer = styled.div`
+
+const LeftSection = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 `;
-const RightContainer = styled.div`
-  flex: 2;
+const RightSection = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
 `;
+
 const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-`;
-const ElegantText = styled.p`
-  margin: 0;
-  align-self: flex-start;
-  font-size: 5vw;
-  font-weight: bolder;
-  color: ${colors.crimson};
-  text-shadow: 0px 0px 2px ${colors.crimson};
-  @media (max-width: 900px) {
-    font-size: 2rem;
-  }
-`;
-const LadyText = styled.p`
-  margin: 0;
-  align-self: flex-end;
-  font-size: 5vw;
-  font-weight: bolder;
-  color: ${colors.blue};
-  text-shadow: 0px 0px 2px ${colors.blue};
-  margin-left: 3rem;
-
-  @media (max-width: 900px) {
-    font-size: 2rem;
-  }
-`;
-const LogoHr = styled.div`
-  border: 2px solid ${colors.black};
-`;
-
-const PromotionParagraph = styled.p`
-  line-height: 22px;
-  letter-spacing: 0.1em;
-  margin: 1rem;
-`;
-const ActionButton = styled.button`
-  background: transparent;
-  border: none;
-  text-shadow: 0px 0px 1px ${colors.black};
-  color: ${colors.black};
-  margin: 1rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 4rem;
   font-weight: bold;
-  line-height: 22px;
-  letter-spacing: 0.15em;
-  text-decoration-line: underline;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  padding: 1rem;
+  @media (max-width: 500px) {
+    font-size: 2rem;
+    padding: 0;
+  }
+`;
+const LogoTextTop = styled.p`
+  align-self: flex-start;
+  margin: 0;
+  color: #cd5459;
+`;
+const LogoTextBottom = styled.p`
+  align-self: flex-end;
+  margin: 0;
+  color: #20abe7;
+`;
+const TextParagraph = styled.p`
+  letter-spacing: 0.12em;
+  padding: 1rem;
+  max-width: 460px;
+  line-height: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+  color: ${colors.black};
 `;
 
-const RotatedBackground = styled.div`
-  background: ${colors.pink} url(${({ bg }) => bg}) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  transform: rotateZ(25deg);
-  transform-origin: center;
-  width: 50%;
-  height: 50%;
+const CallButton = styled.a`
+  padding: 1rem;
+  color: ${colors.black};
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: underline;
+  max-width: 200px;
+  > * {
+    margin-left: 1rem;
+  }
 `;
-const Card = styled.div`
+const LeftSectionCardsContainer = styled.div`
+  justify-self: flex-end;
   display: flex;
-  position: absolute;
-  width: 55%;
-  height: 50%;
+  padding: 5rem;
+  height: 100%;
+  align-items: flex-end;
+  @media (max-width: 1024px) {
+    padding: 1rem;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+`;
+const CardOneContainer = styled.div`
+  align-self: center;
+  background: ${colors.pink};
+  margin: 1rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
-const CardMedia = styled.div`
+const CardOneImage = styled.div`
   background: url(${({ bg }) => bg}) no-repeat;
-  flex: 1;
   background-size: cover;
   background-position: center;
-`;
-const CardDesc = styled.div`
-  flex: 1;
-  background: ${colors.blue};
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  justify-content: space-around;
-`;
-const CardTitle = styled.p`
-  align-self: flex-end;
-  font-weight: bolder;
-  color: ${colors.black};
-`;
-const CardParagraph = styled.p`
-  color: ${colors.black};
+  width: 20vw;
+  height: 20vw;
+  min-width: 200px;
+  min-height: 300px;
+  position: relative;
+  left: -1rem;
+  bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-const IndicatorsContainer = styled.div``;
-const IndicatorCircle = styled.button`
-  background: ${({ active }) => (active ? colors.black : "#787878")};
-  border: none;
-  width: 10px;
-  height: 10px;
-  margin: 0.2rem;
-  border-radius: 10px;
-  cursor: pointer;
+const CardTwoContainer = styled.div`
+  background: ${colors.pink};
+  margin: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+const CardTwoImage = styled.div`
+  background: url(${({ bg }) => bg}) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 20vw;
+  height: 20vw;
+  min-width: 200px;
+  min-height: 300px;
+  position: relative;
+  left: -1rem;
+  bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+const CardThreeImage = styled.div`
+  background: url(${({ bg }) => bg}) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 20vw;
+  height: 20vw;
+  min-width: 250px;
+  min-height: 450px;
+  position: relative;
+  left: -1rem;
+  bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+const CardThreeContainer = styled.div`
+  background: ${colors.pink};
+  margin: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 export {
   Wrapper,
+  LeftSection,
+  RightSection,
   LogoContainer,
-  ElegantText,
-  LadyText,
-  LogoHr,
-  PromotionParagraph,
-  ActionButton,
-  RotatedBackground,
-  LeftContainer,
-  RightContainer,
-  Card,
-  CardMedia,
-  CardDesc,
-  CardTitle,
-  CardParagraph,
-  IndicatorCircle,
-  IndicatorsContainer,
+  LogoTextTop,
+  LogoTextBottom,
+  TextParagraph,
+  CallButton,
+  LeftSectionCardsContainer,
+  CardOneContainer,
+  CardOneImage,
+  CardTwoContainer,
+  CardTwoImage,
+  CardThreeImage,
+  CardThreeContainer,
 };
